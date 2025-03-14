@@ -19,7 +19,7 @@ export default function Navbar() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []); // Eliminado el "pe" extra aquí
+  }, []);
 
   // Función para manejar el desplazamiento suave
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -63,7 +63,7 @@ export default function Navbar() {
         </div>
         <div className="navbar-end">
           <ThemeToggle />
-          <Link href="/dashboard" className="btn btn-primary ml-2">Dashboard</Link>
+          <Link href="/login" className="btn btn-primary ml-2">Dashboard</Link>
         </div>
       </div>
     </div>
