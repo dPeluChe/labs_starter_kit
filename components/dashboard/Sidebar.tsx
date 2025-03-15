@@ -9,7 +9,9 @@ import {
   Users, 
   Settings, 
   HelpCircle,
-  LogOut
+  LogOut,
+  FileImage,
+  User
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -23,6 +25,8 @@ export default function Sidebar({ sidebarOpen }: SidebarProps) {
     { name: 'Dashboard', href: '/dashboard', icon: Home },
     { name: 'Analytics', href: '/dashboard/analytics', icon: BarChart2 },
     { name: 'Users', href: '/dashboard/users', icon: Users },
+    { name: 'Assets', href: '/dashboard/assets', icon: FileImage },
+    { name: 'Profile', href: '/dashboard/profile', icon: User },
     { name: 'Settings', href: '/dashboard/settings', icon: Settings },
     { name: 'Help', href: '/dashboard/help', icon: HelpCircle },
   ];
