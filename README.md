@@ -11,6 +11,10 @@ Este proyecto es un starter kit para aplicaciones de feedback, construido con Ne
 - 📱 Diseño responsive
 - 🔄 Navegación con scroll suave
 - 🔒 Estructura de proyecto organizada y escalable
+- 📊 Panel de administración con gestión de base de datos
+- 🗄️ Sincronización y gestión de modelos de datos
+- 🔍 Visualización y edición de datos en tablas
+- 🧰 Campos estándar automáticos para todos los modelos
 
 ## Inicio rápido
 
@@ -30,6 +34,11 @@ Visita http://localhost:3000 para ver la aplicación.
 ├── app/                    # App Router de Next.js
 │   ├── (landing)/          # Grupo de rutas para la landing page
 │   ├── dashboard/          # Rutas para el dashboard
+│   │   ├── database/       # Gestión de base de datos
+│   │   │   └── sync/       # Sincronización y gestión de modelos
+│   │   └── layout.tsx      # Layout del dashboard
+│   ├── api/                # Rutas de API
+│   │   └── db-sync/        # Endpoints para sincronización de DB
 │   └── globals.css         # Estilos globales
 ├── components/             # Componentes reutilizables
 │   ├── landing/            # Componentes específicos de la landing
@@ -38,8 +47,17 @@ Visita http://localhost:3000 para ver la aplicación.
 │   └── themes.ts           # Configuración de temas
 ├── public/                 # Archivos estáticos
 └── docs/                   # Documentación
- ```
+    ├── changelog.md        # Registro de cambios
+    └── tech_explanation.md # Explicaciones técnicas
+```
 
+## Campos estándar en modelos
+Todos los modelos creados incluyen automáticamente estos campos estándar:
+
+- created_at : Fecha y hora de creación del registro
+- updated_at : Fecha y hora de la última actualización
+- is_active : Indicador de estado activo (para eliminación lógica)
+- metadata : Campo JSON para datos adicionales sin modificar el esquema
 ## Temas disponibles
 El proyecto incluye soporte para varios temas de DaisyUI:
 

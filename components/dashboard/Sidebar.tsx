@@ -11,7 +11,11 @@ import {
   HelpCircle,
   LogOut,
   FileImage,
-  User
+  User,
+  Database,
+  Code,
+  RefreshCw,
+  Activity
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -28,6 +32,9 @@ export default function Sidebar({ sidebarOpen }: SidebarProps) {
     { name: 'Assets', href: '/dashboard/assets', icon: FileImage },
     { name: 'Profile', href: '/dashboard/profile', icon: User },
     { name: 'Settings', href: '/dashboard/settings', icon: Settings },
+    { name: 'Service Status', href: '/dashboard/service-status', icon: Activity },
+    { name: 'GraphQL Explorer', href: '/dashboard/graphql-explorer', icon: Code },
+    { name: 'DB Sync', href: '/dashboard/database/sync', icon: RefreshCw },
     { name: 'Help', href: '/dashboard/help', icon: HelpCircle },
   ];
 
