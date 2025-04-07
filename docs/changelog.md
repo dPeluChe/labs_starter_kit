@@ -1,5 +1,24 @@
 # CHANGELOG DEL PROYECTO
 
+
+## [0.3.0] - 2023-07-15
+
+### Añadido
+- Integración completa con Nhost para GraphQL y gestión de base de datos
+- Variables de entorno para configuración de Nhost/Hasura
+- Modo de simulación para desarrollo sin dependencias externas
+- Manejo mejorado de errores en operaciones de base de datos
+- Alertas y notificaciones para feedback del usuario
+- Soporte para visualización de relaciones entre modelos
+- Validación mejorada de tipos de datos en el editor de modelos
+
+### Mejorado
+- Robustez en la comunicación con la API de GraphQL
+- Manejo de errores con mensajes descriptivos
+- Interfaz de usuario con indicadores de estado de operaciones
+- Documentación de configuración de entorno
+- Logs detallados para depuración
+
 ## [0.2.0] - 2023-06-10
 
 ### Añadido

@@ -15,6 +15,8 @@ Este proyecto es un starter kit para aplicaciones de feedback, construido con Ne
 - 🗄️ Sincronización y gestión de modelos de datos
 - 🔍 Visualización y edición de datos en tablas
 - 🧰 Campos estándar automáticos para todos los modelos
+- 🔌 Integración con Nhost para GraphQL y gestión de base de datos
+- 🔄 Simulación de operaciones para desarrollo sin dependencias externas
 
 ## Inicio rápido
 
@@ -27,6 +29,25 @@ pnpm dev
 ```
 
 Visita http://localhost:3000 para ver la aplicación.
+
+## Configuración de entorno
+Crea un archivo .env.local en la raíz del proyecto con las siguientes variables:
+
+```plaintext
+# Nhost/Hasura
+NEXT_PUBLIC_NHOST_SUBDOMAIN=tu-subdomain
+NEXT_PUBLIC_NHOST_REGION=tu-region
+NEXT_PUBLIC_NHOST_GRAPHQL_URL=https://tu-subdomain.db.tu-region.nhost.run/v1/graphql
+NEXT_PUBLIC_HASURA_ADMIN_SECRET=tu-admin-secret
+
+# Conexión a PostgreSQL (opcional)
+NHOST_PUBLIC_URL=tu-subdomain.db.tu-region.nhost.run
+NHOST_POSTGRESS_PORT=5432
+NHOST_POSTGRESS_DB_NAME=tu-db-name
+NHOST_POSTGRESS_DB_USR=postgres
+NHOST_POSTGRESS_DB_PASS=tu-password
+NHOST_POSTGRESS_URI=postgres://postgres:tu-password@tu-subdomain.db.tu-region.nhost.run:5432/
+```
 
 ## Estructura del proyecto
 ```plaintext
@@ -58,6 +79,10 @@ Todos los modelos creados incluyen automáticamente estos campos estándar:
 - updated_at : Fecha y hora de la última actualización
 - is_active : Indicador de estado activo (para eliminación lógica)
 - metadata : Campo JSON para datos adicionales sin modificar el esquema
+
+## Modo de desarrollo
+El sistema incluye un modo de simulación para desarrollo que permite trabajar sin una conexión activa a Nhost/Hasura. Esto facilita el desarrollo y pruebas de la interfaz de usuario sin depender de servicios externos.
+
 ## Temas disponibles
 El proyecto incluye soporte para varios temas de DaisyUI:
 
